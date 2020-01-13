@@ -1,4 +1,5 @@
 <?php
+#Закомментированный ниже кусок php кода реализует создание таблиц `log_table` и `country`; заполняет таблицу `log_table` данными из `logs.txt`, заполняет в таблице `country` название страны (столбец `country`), используя API сайта https://ipgeolocation.io  
 /*
 $link = mysqli_connect('localhost', 'root', '', 'vse_na_dno');
 mysqli_set_charset($link, "utf8");
@@ -11,6 +12,10 @@ if($sendquery) {
 else {
 	echo mysqli_error($link);
 }
+include("Send_to_database.php");
+SendToDatabase($host, $username, $passwd, $dbname, $file_ = 'logs.php', $table_ = 'log_table');
+include("set_country.php");
+SendCountryToDatabase($host, $username, $passwd, $dbname, $file_ = 'logs.php');
 */
 ?>
 <html>
