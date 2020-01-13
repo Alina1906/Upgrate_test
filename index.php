@@ -1,3 +1,18 @@
+<?php
+/*
+$link = mysqli_connect('localhost', 'root', '', 'vse_na_dno');
+mysqli_set_charset($link, "utf8");
+$query = 'CREATE TABLE `vse_na_dno`.`log_table` ( `id` INT NOT NULL AUTO_INCREMENT , `date_` DATE NOT NULL , `time_` TIME NOT NULL , `ip` VARCHAR(25) NOT NULL , `category` VARCHAR(50) NULL , `good` VARCHAR(50) NULL , `goods_id` VARCHAR(25) NULL , `amount` INT(10) NULL , `user_id` VARCHAR(25) NULL , `cart_id` VARCHAR(25) NULL , `pay` BOOLEAN NULL , `success_pay` BOOLEAN NULL , PRIMARY KEY (`id`) , UNIQUE INDEX (`ip`)) ENGINE = InnoDB;
+	CREATE TABLE `vse_na_dno`.`country` ( `ip` VARCHAR(25) NOT NULL , `country` VARCHAR(50) NULL , FOREIGN KEY (`ip`) REFERENCES `log_table`(`ip`)) ENGINE = InnoDB;';
+$sendquery = mysqli_query($link, $query);
+if($sendquery) {
+	echo 'таблицы успешно созданы';
+}
+else {
+	echo mysqli_error($link);
+}
+*/
+?>
 <html>
   	<head>
   		<meta charset="utf-8">
