@@ -1,7 +1,7 @@
 <?php
 #Закомментированный ниже кусок php кода реализует создание таблиц `log_table` и `country`; заполняет таблицу `log_table` данными из `logs.txt`, заполняет в таблице `country` название страны (столбец `country`), используя API сайта https://ipgeolocation.io  
 /*
-$link = mysqli_connect('localhost', 'root', '', 'vse_na_dno');
+$link = mysqli_connect($host, $username, $passwd, $dbname);
 mysqli_set_charset($link, "utf8");
 $query = 'CREATE TABLE `vse_na_dno`.`log_table` ( `id` INT NOT NULL AUTO_INCREMENT , `date_` DATE NOT NULL , `time_` TIME NOT NULL , `ip` VARCHAR(25) NOT NULL , `category` VARCHAR(50) NULL , `good` VARCHAR(50) NULL , `goods_id` VARCHAR(25) NULL , `amount` INT(10) NULL , `user_id` VARCHAR(25) NULL , `cart_id` VARCHAR(25) NULL , `pay` BOOLEAN NULL , `success_pay` BOOLEAN NULL , PRIMARY KEY (`id`) , UNIQUE INDEX (`ip`)) ENGINE = InnoDB;
 	CREATE TABLE `vse_na_dno`.`country` ( `ip` VARCHAR(25) NOT NULL , `country` VARCHAR(50) NULL , FOREIGN KEY (`ip`) REFERENCES `log_table`(`ip`)) ENGINE = InnoDB;';
