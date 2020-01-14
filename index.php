@@ -13,9 +13,11 @@ else {
 	echo mysqli_error($link);
 }
 include("Send_to_database.php");
-SendToDatabase($host, $username, $passwd, $dbname, $file_ = 'logs.php', $table_ = 'log_table');
+#заполнение таблицы `log_table` данными
+SendToDatabase($host, $username, $passwd, $dbname, $file_ = 'logs.txt', $table_ = 'log_table');
 include("set_country.php");
-SendCountryToDatabase($host, $username, $passwd, $dbname, $file_ = 'logs.php');
+#заполнение таблицы `country` данными
+SendCountryToDatabase($host, $username, $passwd, $dbname, $file_ = 'logs.txt');
 */
 ?>
 <html>
